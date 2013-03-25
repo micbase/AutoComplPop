@@ -37,35 +37,35 @@ function s:makeDefaultBehavior()
         \   'css'    : [],
         \ }
   "---------------------------------------------------------------------------
-  if !empty(g:acp_behaviorUserDefinedFunction) &&
-        \ !empty(g:acp_behaviorUserDefinedMeets)
-    for key in keys(behavs)
-      call add(behavs[key], {
-            \   'command'      : "\<C-x>\<C-u>",
-            \   'completefunc' : g:acp_behaviorUserDefinedFunction,
-            \   'meets'        : g:acp_behaviorUserDefinedMeets,
-            \   'repeat'       : 0,
-            \ })
-    endfor
-  endif
+  "if !empty(g:acp_behaviorUserDefinedFunction) &&
+        "\ !empty(g:acp_behaviorUserDefinedMeets)
+    "for key in keys(behavs)
+      "call add(behavs[key], {
+            "\   'command'      : "\<C-x>\<C-u>",
+            "\   'completefunc' : g:acp_behaviorUserDefinedFunction,
+            "\   'meets'        : g:acp_behaviorUserDefinedMeets,
+            "\   'repeat'       : 0,
+            "\ })
+    "endfor
+  "endif
   "---------------------------------------------------------------------------
-  for key in keys(behavs)
-    call add(behavs[key], {
-          \   'command'      : "\<C-x>\<C-u>",
-          \   'completefunc' : 'acp#completeSnipmate',
-          \   'meets'        : 'acp#meetsForSnipmate',
-          \   'onPopupClose' : 'acp#onPopupCloseSnipmate',
-          \   'repeat'       : 0,
-          \ })
-  endfor
+  "for key in keys(behavs)
+    "call add(behavs[key], {
+          "\   'command'      : "\<C-x>\<C-u>",
+          "\   'completefunc' : 'acp#completeSnipmate',
+          "\   'meets'        : 'acp#meetsForSnipmate',
+          "\   'onPopupClose' : 'acp#onPopupCloseSnipmate',
+          "\   'repeat'       : 0,
+          "\ })
+  "endfor
   "---------------------------------------------------------------------------
-  for key in keys(behavs)
-    call add(behavs[key], {
-          \   'command' : g:acp_behaviorKeywordCommand,
-          \   'meets'   : 'acp#meetsForKeyword',
-          \   'repeat'  : 0,
-          \ })
-  endfor
+  "for key in keys(behavs)
+    "call add(behavs[key], {
+          "\   'command' : g:acp_behaviorKeywordCommand,
+          "\   'meets'   : 'acp#meetsForKeyword',
+          "\   'repeat'  : 0,
+          "\ })
+  "endfor
   "---------------------------------------------------------------------------
   for key in keys(behavs)
     call add(behavs[key], {
@@ -81,11 +81,11 @@ function s:makeDefaultBehavior()
         \   'repeat'  : 0,
         \ })
   "---------------------------------------------------------------------------
-  call add(behavs.python, {
-        \   'command' : "\<C-x>\<C-o>",
-        \   'meets'   : 'acp#meetsForPythonOmni',
-        \   'repeat'  : 0,
-        \ })
+  "call add(behavs.python, {
+        "\   'command' : "\<C-x>\<C-o>",
+        "\   'meets'   : 'acp#meetsForPythonOmni',
+        "\   'repeat'  : 0,
+        "\ })
   "---------------------------------------------------------------------------
   call add(behavs.perl, {
         \   'command' : "\<C-x>\<C-o>",

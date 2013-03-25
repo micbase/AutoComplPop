@@ -121,10 +121,10 @@ function acp#meetsForRubyOmni(context)
 endfunction
 
 "
-function acp#meetsForPythonOmni(context)
-  return has('python') && g:acp_behaviorPythonOmniLength >= 0 &&
-        \ a:context =~ '\k\.\k\{' . g:acp_behaviorPythonOmniLength . ',}$'
-endfunction
+"function acp#meetsForPythonOmni(context)
+  "return has('python') && g:acp_behaviorPythonOmniLength >= 0 &&
+        "\ a:context =~ '\k\.\k\{' . g:acp_behaviorPythonOmniLength . ',}$'
+"endfunction
 
 "
 function acp#meetsForPerlOmni(context)
